@@ -1,7 +1,7 @@
 import os
 
 DOC_DIR = '../Documents'
-docs = os.listdir(DOC_DIR)
+docs = sorted(os.listdir(DOC_DIR))
 
 docs_index = {}
 inv_index = {}
@@ -12,6 +12,7 @@ for idx, doc in enumerate(docs):
     f = open(DOC_DIR+'/'+doc, 'r')
     docs_index[idx] = doc
     tokens = f.read().lower().strip().split(' ')
+    pad = 0
     for token in tokens:
         if token in stopword:
             continue
@@ -19,9 +20,10 @@ for idx, doc in enumerate(docs):
             check = inv_index[token]
             if(docs.index(doc) in check):
                 continue
-            inv_index[token].insert(0, [tokens.index(token), docs.index(doc)])
+            inv_index[token].insert(0, [pad, docs.index(doc)])
         else:
-            inv_index[token] = [[tokens.index(token), docs.index(doc)]]
+            inv_index[token] = [[pad, docs.index(doc)]]
+        pad = pad + len(token)+1
 
 print(inv_index)
 print(docs_index)
