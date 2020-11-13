@@ -1,4 +1,12 @@
-# ir-inverted-index
+# Cosine measure
+
+![image](https://user-images.githubusercontent.com/22569688/99076157-49c42400-25ed-11eb-86bb-25ded9300838.png)
+
+---
+
+Cosine measure or Cosine similarity is a measure of similarity between two non-zero vectors of an inner product space. It is defined to equal the cosine of the angle between them, which is also the same as the inner product of the same vectors normalized to both have length 1.
+
+---
 
 Information Retrieval inverted index
 

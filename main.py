@@ -9,18 +9,12 @@ __version__ = "0.1.0"
 __license__ = "MIT"
 
 DOCUMENTS_DIR = './Documents'
-QUERY = 'home sales'
+QUERY = 'do big dogs run on the carpet with cat'
 
 
 def main():
     measure = CosineMeasure(query=QUERY, dir_path=DOCUMENTS_DIR)
-    measure.word2documents()
-    print(measure.get_word())
-    print(measure.calculate_idf())
-    print(measure.count_tf())
-    measure.document_vector()
-    measure.query_vector()
-    measure.cosine_measure()
+    measure.document_ranking()
 
 
 if __name__ == "__main__":
