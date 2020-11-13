@@ -1,4 +1,4 @@
-# ir-inverted-index
+# Cosine-measure for Information Retrieval
 
 Information Retrieval inverted index
 
