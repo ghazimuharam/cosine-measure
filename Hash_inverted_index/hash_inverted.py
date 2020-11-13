@@ -1,6 +1,6 @@
 import os
 
-DOC_DIR = '../Documents'
+DOC_DIR = '../Documents2'
 docs = sorted(os.listdir(DOC_DIR))
 
 docs_index = {}
